@@ -33,7 +33,7 @@ public class Bird : MonoBehaviour
                 rb2d.velocity = Vector2.zero;
                 //    new Vector2(rb2d.velocity.x,0);
                 //..giving the bird some upward force.
-                rb2d.AddForce(new Vector2(0, upforce));
+                rb2d.AddForce(new Vector2(0, upForce));
             }
         }
     }
@@ -48,7 +48,7 @@ public class Bird : MonoBehaviour
         //...tell the Animator about it...
         anim.SetTrigger("Die");
         //...and tell the game control about it.
-        GameControl.instance.BirdDied();
+       GameControl.instance.BirdDied();
     }
 }
 
